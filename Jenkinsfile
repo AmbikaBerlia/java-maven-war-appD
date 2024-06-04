@@ -21,11 +21,7 @@ pipeline{
           stage('Sonar Scan'){
              steps{
                  withSonarQubeEnv("SonarQube") {
-                    sh "${tool("Sonar")}/bin/sonar-scanner \
-                     -Dsonar.host.url=http://ec2-65-0-26-221.ap-south-1.compute.amazonaws.com:9000/ \
-                     -Dsonar.login=sqp_ffce99db8d53b6f2998ce009b9aecef3669870ed \
-                     -Dsonar.java.binaries=target \
-                     -Dsonar.projectKey="java-maven-war-appD"
+                    sh "${tool("Sonar")}/bin/sonar-scanner -Dsonar.host.url=http://ec2-65-0-26-221.ap-south-1.compute.amazonaws.com:9000/ -Dsonar.login=sqp_ffce99db8d53b6f2998ce009b9aecef3669870ed -Dsonar.java.binaries=target -Dsonar.projectKey= java-maven-war-appD"
                  }
              }
          }
