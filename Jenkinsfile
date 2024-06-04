@@ -1,16 +1,13 @@
 pipeline{
-    agent{
-        label 'velakaran'
-    }
-
+    agent any
     tools {
-        maven 'maven_3.9.0'
+        maven 'Maven_3.9.7'
     }
 
     stages{
         stage('SCM Checkout'){
             steps{
-                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/DevOps-SVC04/java-maven-war-app.git']])
+                checkout scmGit(branches: [[name: '*/Ambika']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/AmbikaBerlia/java-maven-war-appD.git']])
             }
 
         }
