@@ -22,10 +22,10 @@ pipeline{
              steps{
                  withSonarQubeEnv("SonarQube") {
                     sh "${tool("Sonar")}/bin/sonar-scanner \
-                     -Dsonar.host.url=http://ec2-13-232-201-247.ap-south-1.compute.amazonaws.com:9000/ \
-                     -Dsonar.login=sqp_0c07fd0d029a2928a7f9a656ce9486e029a7affa \
-                     -Dsonar.java.binaries=target \
-                     -Dsonar.projectKey=java-maven-app"
+                     -Dsonar.host.url= http://ec2-65-0-26-221.ap-south-1.compute.amazonaws.com:9000/ \
+                     -Dsonar.login= sqp_ffce99db8d53b6f2998ce009b9aecef3669870ed \
+                     -Dsonar.java.binaries= target \
+                     -Dsonar.projectKey= java-maven-war-appD
                  }
              }
          }
